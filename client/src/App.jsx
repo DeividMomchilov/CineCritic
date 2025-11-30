@@ -4,6 +4,7 @@ import Login from "./components/login/Login";
 import RegisterForm from "./components/register/RegisterForm";
 import Header from "./components/header/Header";
 import MovieCatalog from "./components/movie-catalog/MovieCatalog";
+import NotFound from "./components/not-found/NotFound";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<RegisterForm/>}/>
         <Route path="/catalog" element={<MovieCatalog/>}/>
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </>
   )
