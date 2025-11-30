@@ -8,7 +8,19 @@ export default function Header() {
       <nav>
         <ul className="flex space-x-6">
           <li>
-            <Link to="/" className="text-gray-200 hover:text-red-500 transition">Home</Link>
+            <Link to="/" className="text-gray-200 hover:text-red-500 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="text-gray-200 hover:text-red-500 transition">
+              Sign In
+            </Link>
+          </li>
+          <li>
+            <Link to="/register" className="text-black bg-gradient-to-r from-red-700 via-red-500 to-yellow-600 font-semibold px-4 py-2 rounded-full shadow-lg transition hover:from-yellow-600 hover:to-red-700 hover:scale-105 border border-red-700">
+              Sign Up
+            </Link>
           </li>
         </ul>
       </nav>
