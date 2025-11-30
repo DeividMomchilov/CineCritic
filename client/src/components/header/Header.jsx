@@ -13,6 +13,11 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link to="/catalog" className="text-gray-200 hover:text-red-500 transition">
+              Catalog
+            </Link>
+          </li>
+          <li>
             <Link to="/login" className="text-gray-200 hover:text-red-500 transition">
               Sign In
             </Link>

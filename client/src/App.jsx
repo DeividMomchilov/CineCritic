@@ -3,6 +3,7 @@ import Home from "./components/home/Home";
 import Login from "./components/login/Login";
 import RegisterForm from "./components/register/RegisterForm";
 import Header from "./components/header/Header";
+import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route index element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<RegisterForm/>}/>
+        <Route path="/catalog" element={<MovieCatalog/>}/>
       </Routes>
     </>
   )
