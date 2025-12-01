@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center mt-8 animate-fadein">
         <h1 className="text-5xl font-extrabold text-red-600 mb-2 drop-shadow-lg uppercase tracking-widest transition-all animate-fadein">Movie Review Platform</h1>
-        <p className="text-lg text-red-100 mb-2 animate-fadeinSlow">Your hub for honest, in-depth movie reviews.</p>
+        <p className="text-lg text-red-100 mb-2 animate-fadeinSlow">Your hub for honest movie reviews.</p>
         <p className="text-md text-gray-200 mb-6 animate-fadeinSlower">Discover, review and discuss movies</p>
         <Link
           to="/catalog"

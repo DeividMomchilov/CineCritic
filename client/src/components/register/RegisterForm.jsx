@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 const initialValues = {
     name: "",
     email: "",
     password: "",
-    country:"",
     gender:"other",
     terms: false
 }
@@ -21,20 +21,18 @@ function validate(values){
   if(!values.password)
     errors['password'] = 'Password is required';
 
-  if(!values.country)
-    errors['country'] = 'Country is required';
-
   if(values.terms === false)
     errors['terms'] = 'Age validation required';
 
   return errors;
 }
 
-export default function RegisterForm() {
+export default function RegisterForm({onRegister}) {
     const [data,setData] = useState(initialValues);
     const [errors, setErrors] = useState({});
     const [touched,setTouched] = useState({});
-
+    const navigate = useNavigate();
+    
     const changeHandler = (e) =>{
         setData((state) => ({
             ...state,
@@ -42,7 +40,7 @@ export default function RegisterForm() {
         }));
     };
 
-    const submitAction = (e) => {
+    const submitAction = async () => {
       const validationErrors = validate(data);
       setErrors(validationErrors);
       setTouched(errors);
@@ -52,6 +50,8 @@ export default function RegisterForm() {
       }
       setData(initialValues);
       setErrors({});
+      await onRegister(data.email,data.password);
+      navigate('/catalog');
   }
 
     const inputClass = (field) => `${errors[field] && touched[field] 
