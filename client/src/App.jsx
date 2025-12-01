@@ -7,23 +7,16 @@ import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 import NotFound from "./components/not-found/NotFound";
 import { useState } from "react";
 import UserContext from "./contexts/UserContext";
+import useFetch from "./hooks/useFetch";
 
 export default function App() {
   const [user, setUser] = useState(null);
+  const { fetch } = useFetch();
 
   const registerHandler = async (email,password) => {
     const newUser = { email, password, };
 
-    const response = await fetch('http://localhost:3030/users/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newUser),
-    });
-
-    const result = await response.json();
-
+    const result = await fetch('/users/register', 'POST', newUser);
     setUser(result);
   }
 
