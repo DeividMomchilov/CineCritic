@@ -1,7 +1,7 @@
 const baseUrl = 'http://localhost:3030';
 
-export default function useFetch() {
-    const fetch = async (url,method, data) => {
+export default function useRequest() {
+    const request = async (url,method, data) => {
         let options = {};
         if(method ) {
             options.method = method;
@@ -23,5 +23,5 @@ export default function useFetch() {
         return await response.json();
     }
     
-    return { fetch };
+    return { request };
 }

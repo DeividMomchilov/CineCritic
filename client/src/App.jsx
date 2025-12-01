@@ -7,16 +7,16 @@ import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 import NotFound from "./components/not-found/NotFound";
 import { useState } from "react";
 import UserContext from "./contexts/UserContext";
-import useFetch from "./hooks/useFetch";
+import useRequest from "./hooks/useFetch";
 
 export default function App() {
   const [user, setUser] = useState(null);
-  const { fetch } = useFetch();
+  const { request } = useRequest();
 
   const registerHandler = async (email,password) => {
     const newUser = { email, password, };
 
-    const result = await fetch('/users/register', 'POST', newUser);
+    const result = await request('/users/register', 'POST', newUser);
     setUser(result);
   }
 

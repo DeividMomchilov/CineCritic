@@ -138,49 +138,6 @@ export default function RegisterForm() {
           )}
         </div>     
 
-        {/* Gender */}
-        <div className="flex flex-col space-y-2 pt-3 pb-2">
-          <span className="text-lg font-bold text-red-400 pb-1">Gender</span>
-          <div className="flex space-x-6">
-            <label className="flex items-center space-x-1 font-semibold text-red-200">
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                checked={data.gender === 'male'}
-                onChange={changeHandler}
-                onBlur={validationHandler}
-                className="accent-red-600 scale-110 mr-1"
-              />
-              <span>Male</span>
-            </label>
-            <label className="flex items-center space-x-1 font-semibold text-yellow-400">
-              <input
-                type="radio"
-                name="gender"
-                value="female"
-                checked={data.gender === 'female'}
-                onChange={changeHandler}
-                onBlur={validationHandler}
-                className="accent-yellow-400 scale-110 mr-1"
-              />
-              <span>Female</span>
-            </label>
-            <label className="flex items-center space-x-1 font-semibold text-gray-400">
-              <input
-                type="radio"
-                name="gender"
-                value="other"
-                checked={data.gender === 'other'}
-                onChange={changeHandler}
-                onBlur={validationHandler}
-                className="accent-gray-500 scale-110 mr-1"
-              />
-              <span>Other</span>
-            </label>
-          </div>
-        </div>
-
         {/* Terms and Conditions */}
         <div className="flex items-center space-x-4 mt-1">
           <input
