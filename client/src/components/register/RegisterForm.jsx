@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
+import UserContext from "../../contexts/UserContext";
 
 const initialValues = {
     name: "",
@@ -27,12 +28,13 @@ function validate(values){
   return errors;
 }
 
-export default function RegisterForm({onRegister}) {
+export default function RegisterForm() {
     const [data,setData] = useState(initialValues);
     const [errors, setErrors] = useState({});
     const [touched,setTouched] = useState({});
-    const navigate = useNavigate();
-    
+    const navigate = useNavigate();   
+    const { registerHandler } = useContext(UserContext);
+
     const changeHandler = (e) =>{
         setData((state) => ({
             ...state,
@@ -50,7 +52,7 @@ export default function RegisterForm({onRegister}) {
       }
       setData(initialValues);
       setErrors({});
-      await onRegister(data.email,data.password);
+      await registerHandler(data.email,data.password);
       navigate('/catalog');
   }
 
