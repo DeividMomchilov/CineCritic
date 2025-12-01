@@ -7,7 +7,7 @@ import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 import NotFound from "./components/not-found/NotFound";
 import { useState } from "react";
 import UserContext from "./contexts/UserContext";
-import useRequest from "./hooks/useFetch";
+import useRequest from "./hooks/useRequest";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -20,7 +20,9 @@ export default function App() {
     setUser(result);
   }
 
-  const loginHandler = (user) => {
+  const loginHandler = async (email,password) => {
+    const result = await request('/users/login', 'POST', {email,password}); 
+    setUser(result);
   }
 
   const logoutHandler = () => {

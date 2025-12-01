@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router";
+import UserContext from "../../contexts/UserContext";
+import { useNavigate } from "react-router";
 
 const initialValues = {
     email: "",
@@ -22,6 +24,8 @@ export default function Login() {
     const [data,setData] = useState(initialValues);
     const [errors, setErrors] = useState({});
     const [touched,setTouched] = useState({});
+    const navigate = useNavigate();   
+    const { loginHandler } = useContext(UserContext);
 
     const changeHandler = (e) =>{
         setData((state) => ({
@@ -30,7 +34,7 @@ export default function Login() {
         }));
     };
 
-    const submitAction = (e) => {
+    const submitAction = async () => {
       const validationErrors = validate(data);
       setErrors(validationErrors);
       setTouched(errors);
@@ -38,8 +42,15 @@ export default function Login() {
       if (Object.keys(validationErrors).length > 0) {
           return;
       }
-      setData(initialValues);
-      setErrors({});
+
+      try {
+        setData(initialValues);
+        setErrors({});
+        await loginHandler(data.email,data.password);
+        navigate('/catalog');
+      } catch (error) {      
+          console.error(error);
+      }
   }
 
     const inputClass = (field) => `${errors[field] && touched[field] 
