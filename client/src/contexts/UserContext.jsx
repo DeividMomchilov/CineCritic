@@ -21,7 +21,6 @@ export function UserProvider(props){
   
     const registerHandler = async (email,password) => {
       const newUser = { email, password, };
-  
       const result = await request('/users/register', 'POST', newUser);
       setUser(result);
     }
@@ -32,7 +31,7 @@ export function UserProvider(props){
     }
   
     const logoutHandler = () => {
-      request('/users/logout', 'GET', null, {accessToken : user.accessToken})
+      return request('/users/logout', 'GET', null, {accessToken : user?.accessToken})
       .finally( () => setUser(null));
     }
   

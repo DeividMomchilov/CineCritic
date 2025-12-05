@@ -14,7 +14,7 @@ export default function useRequest() {
 
         if(data){
             options.headers = {
-                'Content-Type': 'application/json',
+                'content-type': 'application/json',
             };
             options.body = JSON.stringify(data);
         }

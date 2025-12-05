@@ -5,9 +5,9 @@ import RegisterForm from "./components/register/RegisterForm";
 import Header from "./components/header/Header";
 import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 import NotFound from "./components/not-found/NotFound";
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import UserContext from "./contexts/UserContext";
-import useRequest from "./hooks/useRequest";
+import Logout from "./components/logout/logout";
 
 export default function App() {
   const { user } = useContext(UserContext);
@@ -16,6 +16,7 @@ export default function App() {
       <Header/>
       <Routes>
         <Route index element={<Home/>}/>
+        <Route path="/logout" element={<Logout/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<RegisterForm/>}/>
         <Route path="/catalog" element={<MovieCatalog/>}/>

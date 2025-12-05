@@ -22,6 +22,11 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link to="/logout" className="text-gray-200 hover:text-red-500 transition">
+              Logout
+            </Link>
+          </li>
+          <li>
             <Link to="/login" className="text-gray-200 hover:text-red-500 transition">
               Sign In
             </Link>
