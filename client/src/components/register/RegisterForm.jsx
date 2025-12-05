@@ -47,13 +47,17 @@ export default function RegisterForm() {
       setErrors(validationErrors);
       setTouched(errors);
 
-      if (Object.keys(validationErrors).length > 0) {
+      if (Object.keys(validationErrors).length > 0) 
           return;
-      }
+
+      try{
       setData(initialValues);
       setErrors({});
       await registerHandler(data.email,data.password);
       navigate('/catalog');
+      } catch(error){
+        console.error(error);
+      }
   }
 
     const inputClass = (field) => `${errors[field] && touched[field] 

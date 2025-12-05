@@ -5,40 +5,14 @@ import RegisterForm from "./components/register/RegisterForm";
 import Header from "./components/header/Header";
 import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 import NotFound from "./components/not-found/NotFound";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import UserContext from "./contexts/UserContext";
 import useRequest from "./hooks/useRequest";
 
 export default function App() {
-  const [user, setUser] = useState(null);
-  const { request } = useRequest();
-
-  const registerHandler = async (email,password) => {
-    const newUser = { email, password, };
-
-    const result = await request('/users/register', 'POST', newUser);
-    setUser(result);
-  }
-
-  const loginHandler = async (email,password) => {
-    const result = await request('/users/login', 'POST', {email,password}); 
-    setUser(result);
-  }
-
-  const logoutHandler = () => {
-    setUser(null);
-  }
-
-  const userContextValue = {
-    user,
-    isAuthenticated: !!user?.accessToken,
-    registerHandler,
-    loginHandler,
-    logoutHandler,
-  }
-
+  const { user } = useContext(UserContext);
   return (
-    <UserContext.Provider value={userContextValue}>
+    <>
       <Header/>
       <Routes>
         <Route index element={<Home/>}/>
@@ -47,6 +21,6 @@ export default function App() {
         <Route path="/catalog" element={<MovieCatalog/>}/>
         <Route path="*" element={<NotFound/>} />
       </Routes>
-    </UserContext.Provider>
+    </>
   )
 }

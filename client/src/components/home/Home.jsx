@@ -4,8 +4,7 @@ import { Link } from "react-router";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 relative overflow-x-hidden">
-      {/* Hero Section */}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 relative overflow-x-hidden">     
       <section className="flex flex-col items-center mt-8 animate-fadein">
         <h1 className="text-5xl font-extrabold text-red-600 mb-2 drop-shadow-lg uppercase tracking-widest transition-all animate-fadein">Movie Review Platform</h1>
         <p className="text-lg text-red-100 mb-2 animate-fadeinSlow">Your hub for honest movie reviews.</p>
@@ -17,7 +16,6 @@ export default function Home() {
           Browse Catalog
         </Link>
       </section>
-      {/* Latest Movies Section */}
       <section className="mt-10 w-full animate-fadeinUp">
         <h2 className="text-2xl font-bold text-gray-100 mb-4 text-center drop-shadow">Latest Movies</h2>
         <div className="flex flex-wrap justify-center gap-x-2 gap-y-4 md:gap-x-6 md:gap-y-6">
@@ -41,14 +39,12 @@ export default function Home() {
           />
         </div>
       </section>
-      {/* About Card */}
       <section className="mt-10 animate-fadeinUpSlow w-full flex justify-center">
         <div className="rounded-xl bg-zinc-950/90 border border-red-900 shadow-xl p-6 max-w-xl text-center backdrop-blur-lg">
           <h3 className="text-xl font-bold text-red-400 mb-2">What is CineCritic?</h3>
           <p className="text-gray-200 text-base">CineCritic is your modern platform to explore the latest movies, share your opinions, and connect with fellow movie enthusiasts. From blockbuster hits to indie gems, join a community passionate about film.</p>
         </div>
       </section>
-      {/* Animations */}
       <style>
         {`
           .animate-fadein    { animation: fadeIn 1s; }
