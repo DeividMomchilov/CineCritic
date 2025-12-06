@@ -4,10 +4,12 @@ import { Link, useNavigate, useParams } from "react-router";
 import useRequest from "../../hooks/useRequest";
 
 export default function MovieDetails() {
-    //const {user, isAuthenticated} = useContext(UserContext);
+    const {user, isAuthenticated} = useContext(UserContext);
     const {movieId} = useParams();
     const {data : movie, request} = useRequest(`/data/movies/${movieId}`,{});
     const navigate = useNavigate();
+
+    const isOwner = user?._id === movie?._ownerId;
 
     const deleteGameHandler = async () => {
 
@@ -60,6 +62,7 @@ export default function MovieDetails() {
                             </div>
 
                             {/* Action Buttons */}
+                            {isOwner &&                       
                             <div className="flex gap-4 mt-6">
                                 <Link to={`/catalog/${movieId}/edit`}>
                                     <button className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-red-600/50">
@@ -70,6 +73,7 @@ export default function MovieDetails() {
                                     Delete
                                 </button>
                             </div>
+                            }
                         </div>
                     </div>
                 </div>
