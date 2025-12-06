@@ -14,11 +14,6 @@ export default function Header() {
       <nav>
         <ul className="flex space-x-6">
           <li>
-            <Link to="/" className="text-gray-200 hover:text-red-500 transition">
-              Home
-            </Link>
-          </li>
-          <li>
             <Link to="/catalog" className="text-gray-200 hover:text-red-500 transition">
               Catalog
             </Link>
@@ -32,8 +27,14 @@ export default function Header() {
                   Logout
                 </Link>
               </li>
+              <li>
+                <Link to="/create" className="text-gray-200 hover:text-red-500 transition">
+                  Add Movie
+                </Link>
+              </li>
             </>
               )
+              
             : (
             <>
               <li>
