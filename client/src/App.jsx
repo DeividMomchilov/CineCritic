@@ -7,7 +7,7 @@ import MovieCatalog from "./components/movie-catalog/MovieCatalog";
 import NotFound from "./components/not-found/NotFound";
 import { useContext} from "react";
 import UserContext from "./contexts/UserContext";
-import Logout from "./components/logout/logout";
+import Logout from "./components/logout/Logout";
 import CreateMovie from "./components/create-movie/CreateMovie";
 import MovieDetails from "./components/movie-details/MovieDetails";
 import EditMovie from "./components/edit-movie/EditMovie";
