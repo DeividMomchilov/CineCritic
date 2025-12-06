@@ -9,6 +9,7 @@ import { useContext} from "react";
 import UserContext from "./contexts/UserContext";
 import Logout from "./components/logout/logout";
 import CreateMovie from "./components/create-movie/CreateMovie";
+import MovieDetails from "./components/movie-details/MovieDetails";
 
 export default function App() {
   const { user } = useContext(UserContext);
@@ -21,7 +22,8 @@ export default function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<RegisterForm/>}/>
         <Route path="/catalog" element={<MovieCatalog/>}/>
-        <Route path="/create" element={<CreateMovie/>}/>
+        <Route path="/catalog/create" element={<CreateMovie/>}/>
+        <Route path="/catalog/:movieId/details" element={<MovieDetails/>}/>
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </>

@@ -28,7 +28,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/create" className="text-gray-200 hover:text-red-500 transition">
+                <Link to="/catalog/create" className="text-gray-200 hover:text-red-500 transition">
                   Add Movie
                 </Link>
               </li>

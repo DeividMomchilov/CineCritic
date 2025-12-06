@@ -1,0 +1,59 @@
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
+import { useNavigate, useParams } from "react-router";
+import useRequest from "../../hooks/useRequest";
+
+export default function MovieDetails() {
+    //const {user, isAuthenticated} = useContext(UserContext);
+    const {movieId} = useParams();
+    const {data : movie, request} = useRequest(`/data/movies/${movieId}`);
+    const navigate = useNavigate();
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+                <div className="bg-zinc-950/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-red-900 overflow-hidden">
+                    <div className="grid md:grid-cols-2 gap-0">
+                        {/* Image Section */}
+                        <div className="relative h-[400px] md:h-[600px] overflow-hidden">
+                            <img 
+                                src={movie.imageUrl} 
+                                alt={movie.title}
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        </div>
+
+                        {/* Content Section */}
+                        <div className="p-8 md:p-12 flex flex-col justify-center">
+                            {/* Genre Badge */}
+                            <div className="mb-4">
+                                <span className="inline-block px-4 py-2 bg-red-900/50 border border-red-600 rounded-full text-red-300 text-sm font-semibold uppercase tracking-wider">
+                                    {movie.genre}
+                                </span>
+                            </div>
+
+                            {/* Title */}
+                            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-lg leading-tight">
+                                {movie.title}
+                            </h1>
+
+                            {/* Description */}
+                            <div className="mb-6">
+                                <h2 className="text-xl font-bold text-red-400 mb-3 uppercase tracking-wide">
+                                    Synopsis
+                                </h2>
+                                <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+                                    {movie.description}
+                                </p>
+                            </div>
+
+                            {/* Decorative Line */}
+                            <div className="h-1 w-24 bg-gradient-to-r from-red-600 to-yellow-600 rounded-full mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
