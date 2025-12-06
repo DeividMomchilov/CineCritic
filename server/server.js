@@ -1333,52 +1333,41 @@
         }
     };
     var seedData = {
-        
-        games: {
-           "5c7d8f0e-3a9b-4c2d-9e1f-6a4b3c8d2e7a": {
-            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-            "title": "The Witcher 3",
-            "genre": "Open World",
-            "players": 32000,
-            "date": "2015-05-19",
-            "imageUrl": "/images/witcher.png",
-            "summary": "A story-driven, open world fantasy RPG. Play as Geralt of Rivia, a monster slayer for hire, who must find the Child of Prophecy in a vast, war-torn world. The game is known for its morally gray choices, mature storyline, and expansive world exploration.",
-            "_createdOn": 1617194350000
-        },
-        "7b9a2c4f-1d5e-4b6c-8a3d-2f1e0g3h4i5j": {
-            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-            "title": "Elden Ring",
-            "genre": "Action RPG",
-            "players": 105000,
-            "date": "2022-02-25",
-            "imageUrl": "/images/elden ring.png",
-            "summary": "A monumental fantasy action RPG developed by FromSoftware and Bandai Namco. Set in the Lands Between, players embark on an epic quest to become the Elden Lord, exploring a vast open world designed by Hidetaka Miyazaki, with worldbuilding contributed by fantasy author George R. R. Martin.",
-            "_createdOn": 1645708800000
-        },
-        "3d4e5f6g-7h8i-9j0k-1l2m-3n4o5p6q7r8s": {
-            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-            "title": "Minecraft",
-            "genre": "Sandbox",
-            "players": 1400000,
-            "date": "2011-11-18",
-            "imageUrl": "/images/minecraft.png",
-            "summary": "Minecraft is a sandbox video game where players explore a blocky, procedurally generated 3D world with infinite terrain. Players may discover and extract raw materials, craft tools and items, and build structures, earthworks and simple machines.",
-            "_createdOn": 1617194450000
-        },
-        "9f8e7d6c-5b4a-3c2d-1e0f-9g8h7i6j5k4l": {
-            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-            "title": "Cyberpunk 2077",
-            "genre": "Action RPG",
-            "players": 85000,
-            "date": "2020-12-10",
-            "imageUrl": "/images/cyberpunk.png",
-            "summary": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
-            "_createdOn": 1607558400000
+        movies: {
+            "1240549d-f0e0-497e-ab99-eb8f703713d7": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Inception",
+                "genre":"Sci-Fi",
+                "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+                "imageUrl": "https://c4.wallpaperflare.com/wallpaper/764/590/391/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg",
+                "_createdOn": 1614935055353
+            },
+            "143e5265-333e-4150-80e4-16b61de31aa0": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "The Dark Knight",
+                "genre":"Action",
+                "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+                "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDQ5MWU2YWUtNTQ4OC00Njk5LWI0NzctMjM4OGZiNmZmNGViXkEyXkFqcGc@._V1_.jpg",
+                "_createdOn": 1614935181470
+            },
+            "a9bae6d8-793e-46c4-a9db-deb9e3484909": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Interstellar",
+                "genre":"Sci-Fi",
+                "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+                "imageUrl": "https://i.pinimg.com/736x/11/1c/5c/111c5c9ad99661af2d80e38948cf29d8.jpg",
+                "_createdOn": 1614935268135
+            },
+             "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Avatar",
+                "genre":"Sci-Fi",
+                "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+                "imageUrl": "https://i.pinimg.com/originals/ae/63/03/ae6303d3609804c00032bc3dfd768569.jpg",
+                "_createdOn": 1613551344360
             }
         },
-        comments: {
-        
-        }
+        comments: {}
     };
     var rules$1 = {
         users: {

@@ -1,8 +1,11 @@
 import React from "react";
 import Movie from "../movie-catalog/movie/Movie";
-import { Link } from "react-router";
+import { data, Link } from "react-router";
+import useRequest from "../../hooks/useRequest";
+
 
 export default function Home() {
+  const {data: recommendedMovies} = useRequest(`/data/movies?sortBy=_createdOn%20asc&pageSize=3`,[]);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 relative overflow-x-hidden">     
       <section className="flex flex-col items-center mt-8 animate-fadein">
@@ -17,26 +20,11 @@ export default function Home() {
         </Link>
       </section>
       <section className="mt-10 w-full animate-fadeinUp">
-        <h2 className="text-2xl font-bold text-gray-100 mb-4 text-center drop-shadow">Latest Movies</h2>
+        <h2 className="text-2xl font-bold text-gray-100 mb-4 text-center drop-shadow">Recommended Movies</h2>
         <div className="flex flex-wrap justify-center gap-x-2 gap-y-4 md:gap-x-6 md:gap-y-6">
-          <Movie
-            title="Interstellar"
-            rating="PG-13"
-            genre="Adventure"
-            imageUrl="https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg"
-          />
-          <Movie
-            title="Fight Club"
-            rating="R"
-            genre="Drama"
-            imageUrl="https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-          />
-          <Movie
-            title="Dune: Part Two"
-            rating="PG-13"
-            genre="Sci-Fi"
-            imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6WOH9SeFZrkvEqJ5wRzWVNyN-okDdtH8ZuQ&s"
-          />
+          {recommendedMovies.length === 0 
+          ? <p>No movies yet</p>
+          : recommendedMovies.map(movie =><Movie key = {movie._id} {...movie}/>)}
         </div>
       </section>
       <section className="mt-10 animate-fadeinUpSlow w-full flex justify-center">
