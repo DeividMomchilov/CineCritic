@@ -1,13 +1,24 @@
 import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import useRequest from "../../hooks/useRequest";
 
 export default function MovieDetails() {
     //const {user, isAuthenticated} = useContext(UserContext);
     const {movieId} = useParams();
-    const {data : movie, request} = useRequest(`/data/movies/${movieId}`);
+    const {data : movie, request} = useRequest(`/data/movies/${movieId}`,{});
     const navigate = useNavigate();
+
+    const deleteGameHandler = async () => {
+
+        try{
+            await request(`/data/movies/${movieId}`, 'DELETE');
+            navigate('/catalog')
+        }catch(error){
+            alert(error.message);
+        }
+        
+    }
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 py-12 px-4 sm:px-6 lg:px-8">
@@ -48,8 +59,17 @@ export default function MovieDetails() {
                                 </p>
                             </div>
 
-                            {/* Decorative Line */}
-                            <div className="h-1 w-24 bg-gradient-to-r from-red-600 to-yellow-600 rounded-full mt-4"></div>
+                            {/* Action Buttons */}
+                            <div className="flex gap-4 mt-6">
+                                <Link to={`/catalog/${movieId}/edit`}>
+                                    <button className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-red-600/50">
+                                        Edit
+                                    </button>
+                                </Link>
+                                <button onClick={deleteGameHandler} className="px-6 py-3 bg-zinc-700 hover:bg-zinc-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-zinc-700/50">
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

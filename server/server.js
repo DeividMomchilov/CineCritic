@@ -1335,7 +1335,7 @@
     var seedData = {
         movies: {
             "1240549d-f0e0-497e-ab99-eb8f703713d7": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Inception",
                 "genre":"Sci-Fi",
                 "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
@@ -1343,7 +1343,7 @@
                 "_createdOn": 1614935055353
             },
             "143e5265-333e-4150-80e4-16b61de31aa0": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Dark Knight",
                 "genre":"Action",
                 "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
@@ -1351,7 +1351,7 @@
                 "_createdOn": 1614935181470
             },
             "a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Interstellar",
                 "genre":"Sci-Fi",
                 "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
@@ -1359,11 +1359,11 @@
                 "_createdOn": 1614935268135
             },
              "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Avatar",
-                "genre":"Sci-Fi",
-                "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-                "imageUrl": "https://i.pinimg.com/originals/ae/63/03/ae6303d3609804c00032bc3dfd768569.jpg",
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Pirates of the Caribbean",
+                "genre":"Fantasy Action",
+                "description": "Pirates of the Caribbean is an American fantasy supernatural swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the titular media franchise. The films' plots are set primarily in the Caribbean, based on a fictionalized version of the Golden Age of Piracy (c. 1650–1726) while also leading to the range of a mid-1700s setting.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png/250px-Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
                 "_createdOn": 1613551344360
             }
         },

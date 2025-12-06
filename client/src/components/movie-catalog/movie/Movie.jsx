@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function Movie({
   _id,
-  imageUrl = "https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg",
+  imageUrl
 }) {
   return (
     <div

@@ -28,7 +28,7 @@ function validate(values){
   return errors;
 }
 
-export default function CreateMovie(){
+export default function EditMovie(){
     const [data,setData] = useState(initialValues);
     const [errors, setErrors] = useState({});
     const [touched,setTouched] = useState({});
@@ -67,7 +67,7 @@ export default function CreateMovie(){
         await request(`/data/movies/${movieId}`, 'PUT', data);
         setData(initialValues);
         setErrors({}); 
-        navigate('/catalog');
+        navigate(`/catalog/${movieId}/details`);
       } catch (error) {      
           console.error(error);
       }

@@ -10,6 +10,7 @@ import UserContext from "./contexts/UserContext";
 import Logout from "./components/logout/logout";
 import CreateMovie from "./components/create-movie/CreateMovie";
 import MovieDetails from "./components/movie-details/MovieDetails";
+import EditMovie from "./components/edit-movie/EditMovie";
 
 export default function App() {
   const { user } = useContext(UserContext);
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/catalog" element={<MovieCatalog/>}/>
         <Route path="/catalog/create" element={<CreateMovie/>}/>
         <Route path="/catalog/:movieId/details" element={<MovieDetails/>}/>
+        <Route path="/catalog/:movieId/edit" element={<EditMovie/>}/>
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </>
