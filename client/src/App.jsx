@@ -25,12 +25,12 @@ export default function App() {
         <Route path="/catalog" element={<MovieCatalog/>}/>
         <Route path="/catalog/:movieId/details" element={<MovieDetails/>}/>
 
-        <Route element={RouteGuarder}>
+        <Route element={<RouteGuarder/>}>
           <Route path="/logout" element={<Logout/>}/>
           <Route path="/catalog/create" element={<CreateMovie/>}/>
           <Route path="/catalog/:movieId/edit" element={<EditMovie/>}/>
         </Route>
-        
+
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </>
