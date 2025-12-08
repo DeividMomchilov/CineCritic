@@ -11,6 +11,7 @@ import Logout from "./components/logout/Logout";
 import CreateMovie from "./components/create-movie/CreateMovie";
 import MovieDetails from "./components/movie-details/MovieDetails";
 import EditMovie from "./components/edit-movie/EditMovie";
+import RouteGuarder from "./components/route-guarder/RouteGuarder";
 
 export default function App() {
   const { user } = useContext(UserContext);
@@ -19,13 +20,17 @@ export default function App() {
       <Header/>
       <Routes>
         <Route index element={<Home/>}/>
-        <Route path="/logout" element={<Logout/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<RegisterForm/>}/>
         <Route path="/catalog" element={<MovieCatalog/>}/>
-        <Route path="/catalog/create" element={<CreateMovie/>}/>
         <Route path="/catalog/:movieId/details" element={<MovieDetails/>}/>
-        <Route path="/catalog/:movieId/edit" element={<EditMovie/>}/>
+
+        <Route element={RouteGuarder}>
+          <Route path="/logout" element={<Logout/>}/>
+          <Route path="/catalog/create" element={<CreateMovie/>}/>
+          <Route path="/catalog/:movieId/edit" element={<EditMovie/>}/>
+        </Route>
+        
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </>
