@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
+import { Navigate, Outlet } from "react-router";
+
 export default function GuestRouter(){
     const { isAuthenticated } = useContext(UserContext);
 

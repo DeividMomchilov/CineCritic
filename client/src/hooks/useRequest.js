@@ -6,6 +6,7 @@ const baseUrl = 'http://localhost:3030';
 export default function useRequest(url,initialState) {
     const {user, isAuthenticated} = useContext(UserContext);
     const [data, setData] = useState(initialState);
+    const [isLoading, setIsLoading] = useState(false);
 
     const request = async (url,method, data , config = {}) => {
         let options = {};
@@ -44,10 +45,12 @@ export default function useRequest(url,initialState) {
         if(!url)
             return;
 
+        setIsLoading(true);
         request(url)
             .then(result => setData(result))
-            .catch(err => alert(err));
+            .catch(err => alert(err))
+            .finally(() => setIsLoading(false));
     },[url])
     
-    return { request, data };
+    return { request, data, isLoading };
 }

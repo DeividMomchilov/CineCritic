@@ -5,7 +5,7 @@ import useRequest from "../../hooks/useRequest";
 
 
 export default function Home() {
-  const {data: recommendedMovies} = useRequest(`/data/movies?sortBy=_createdOn%20asc&pageSize=3`,[]);
+  const {data: recommendedMovies} = useRequest(`/data/movies?sortBy=_createdOn%20desc&pageSize=3`,[]);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 relative overflow-x-hidden">     
       <section className="flex flex-col items-center mt-8 animate-fadein">

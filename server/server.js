@@ -1365,6 +1365,102 @@
                 "description": "Pirates of the Caribbean is an American fantasy supernatural swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the titular media franchise. The films' plots are set primarily in the Caribbean, based on a fictionalized version of the Golden Age of Piracy (c. 1650–1726) while also leading to the range of a mid-1700s setting.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png/250px-Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
                 "_createdOn": 1613551344360
+            },
+            "c6b3e9d8-1234-4b5a-9876-123456789abc": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Matrix",
+                "genre": "Action Sci-Fi",
+                "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
+                "_createdOn": 1615554321000
+            },
+            "f4a2b1c3-4321-4d5e-8765-987654321fed": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Shawshank Redemption",
+                "genre": "Drama",
+                "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+                "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+                "_createdOn": 1615555432000
+            },
+            "a1b2c3d4-e5f6-4789-0123-abcdef123456": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Pulp Fiction",
+                "genre": "Crime Drama",
+                "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
+                "_createdOn": 1615556543000
+            },
+            "d5e6f7g8-h9i0-4j1k-2l3m-nopqrs456789": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Spirited Away",
+                "genre": "Animation Adventure",
+                "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png",
+                "_createdOn": 1615557654000
+            },
+            "98765432-1234-5678-abcd-ef0123456789": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Godfather",
+                "genre": "Crime Drama",
+                "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+                "imageUrl": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+                "_createdOn": 1615558765000
+            },
+            "b2c3d4e5-f6g7-4890-1234-567890abcdef": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Gladiator",
+                "genre": "Action Drama",
+                "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png",
+                "_createdOn": 1615559876000
+            },
+            "e5f6g7h8-i9j0-4k1l-2m3n-opqrst567890": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Lion King",
+                "genre": "Animation Drama",
+                "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg",
+                "_createdOn": 1615560987000
+            },
+            "h8i9j0k1-l2m3-4n4o-5p6q-rstuvw678901": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Jurassic Park",
+                "genre": "Adventure Sci-Fi",
+                "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg",
+                "_createdOn": 1615562098000
+            },
+            "k1l2m3n4-o5p6-4q7r-8s9t-uvwxyz789012": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Silence of the Lambs",
+                "genre": "Crime Drama",
+                "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg",
+                "_createdOn": 1615563209000
+            },
+            "n4o5p6q7-r8s9-4t0u-1v2w-xyzabc890123": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Back to the Future",
+                "genre": "Adventure Comedy",
+                "description": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg",
+                "_createdOn": 1615564320000
+            },
+            "q7r8s9t0-u1v2-4w3x-4y5z-abcdef901234": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Saving Private Ryan",
+                "genre": "Drama War",
+                "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg",
+                "_createdOn": 1615565431000
+            },
+            "t0u1v2w3-x4y5-4z6a-7b8c-defghi012345": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Schindler's List",
+                "genre": "Biography Drama",
+                "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg",
+                "_createdOn": 1615566542000
             }
         },
         comments: {}
