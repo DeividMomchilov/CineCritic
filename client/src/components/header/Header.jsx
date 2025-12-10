@@ -23,13 +23,13 @@ export default function Header() {
             ? ( 
             <>
               <li>
-                <Link to="/logout" className="text-sm sm:text-base text-gray-200 hover:text-red-500 transition">
-                  Logout
+                <Link to="/catalog/create" className="text-sm sm:text-base text-gray-200 hover:text-red-500 transition">
+                  Add Movie
                 </Link>
               </li>
               <li>
-                <Link to="/catalog/create" className="text-sm sm:text-base text-gray-200 hover:text-red-500 transition">
-                  Add Movie
+                <Link to="/logout" className="text-sm sm:text-base text-gray-200 hover:text-red-500 transition">
+                  Logout
                 </Link>
               </li>
             </>

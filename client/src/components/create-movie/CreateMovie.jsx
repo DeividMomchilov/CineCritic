@@ -6,6 +6,8 @@ import useRequest from "../../hooks/useRequest";
 const initialValues = {
     title: "",
     genre: "",
+    rating: "",
+    duration: "",
     description: "",
     imageUrl: ""
 }
@@ -18,6 +20,12 @@ function validate(values){
 
   if(!values.genre)
     errors['genre'] = 'Genre is required';
+
+  if(!values.rating)
+    errors['rating'] = 'Rating is required';
+
+  if(!values.duration)
+    errors['duration'] = 'Duration is required';
 
   if(!values.description)
     errors['description'] = 'Description is required';
@@ -134,6 +142,50 @@ export default function CreateMovie(){
                                 onBlur={validationHandler}
                             />
                             {errors.genre && touched.genre && (
+                                <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.genre}</p>
+                            )}
+                        </div>
+
+                        <div>
+                            <label 
+                                htmlFor="rating" 
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                            >
+                                Rating
+                            </label>
+                            <input
+                                type="text"
+                                id="rating"
+                                name="rating"
+                                className={`w-full ${inputClass('rating')}`}
+                                placeholder="Enter movie rating"
+                                value={data.rating}
+                                onChange={changeHandler}
+                                onBlur={validationHandler}
+                            />
+                            {errors.rating && touched.rating && (
+                                <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.rating}</p>
+                            )}
+                        </div>
+
+                        <div>
+                            <label 
+                                htmlFor="duration" 
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                            >
+                                Duration
+                            </label>
+                            <input
+                                type="text"
+                                id="duration"
+                                name="duration"
+                                className={`w-full ${inputClass('duration')}`}
+                                placeholder="Enter movie duration"
+                                value={data.duration}
+                                onChange={changeHandler}
+                                onBlur={validationHandler}
+                            />
+                            {errors.duration && touched.duration && (
                                 <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.genre}</p>
                             )}
                         </div>

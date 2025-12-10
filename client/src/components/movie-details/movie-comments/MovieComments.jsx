@@ -60,12 +60,12 @@ export default function MovieComments(){
                                 <article key={comment._id} className="bg-black/30 border border-zinc-800/50 rounded-xl p-5 hover:border-red-800/50 transition-colors">
                                     <div className="flex items-start gap-4">
                                         <div className="h-12 w-12 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
-                                            {comment.author?.email?.charAt(0).toUpperCase() || 'U'}
+                                            {comment.author?.email?.charAt(0).toUpperCase()}
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <p className="text-red-300 font-medium text-sm">
-                                                    {comment.author?.email || 'Anonymous'}
+                                                    {comment.author?.email}
                                                 </p>
                                             </div>
                                             <p className="text-gray-200 leading-relaxed text-base break-words">{comment.text}</p>
