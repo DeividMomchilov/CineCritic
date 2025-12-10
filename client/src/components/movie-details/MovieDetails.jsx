@@ -5,14 +5,14 @@ import useRequest from "../../hooks/useRequest";
 import MovieComments from "./movie-comments/MovieComments";
 
 export default function MovieDetails() {
-    const {user, isAuthenticated} = useContext(UserContext);
+    const {user} = useContext(UserContext);
     const {movieId} = useParams();
     const {data : movie, request} = useRequest(`/data/movies/${movieId}`,{});
     const navigate = useNavigate();
 
     const isOwner = user?._id === movie?._ownerId;
 
-    const deleteGameHandler = async () => {
+    const deleteMovieHandler = async () => {
 
         try{
             await request(`/data/movies/${movieId}`, 'DELETE');
@@ -28,7 +28,6 @@ export default function MovieDetails() {
             <div className="max-w-6xl mx-auto">
                 <div className="bg-zinc-950/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-red-900 overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0">
-                        {/* Image Section */}
                         <div className="relative h-[400px] md:h-[600px] overflow-hidden">
                             <img 
                                 src={movie.imageUrl} 
@@ -38,9 +37,7 @@ export default function MovieDetails() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         </div>
 
-                        {/* Content Section */}
                         <div className="p-8 md:p-12 flex flex-col justify-center">
-                            {/* Genre Badge */}
                             <div className="mb-4 flex flex-wrap gap-2">
                                 <span className="inline-block px-4 py-2 bg-red-900/50 border border-red-600 rounded-full text-red-300 text-sm font-semibold uppercase tracking-wider">
                                     {movie.genre}
@@ -68,7 +65,6 @@ export default function MovieDetails() {
                                 </p>
                             </div>
 
-                            {/* Action Buttons */}
                             {isOwner &&                       
                             <div className="flex gap-4 mt-6">
                                 <Link to={`/catalog/${movieId}/edit`}>
@@ -76,18 +72,16 @@ export default function MovieDetails() {
                                         Edit
                                     </button>
                                 </Link>
-                                <button onClick={deleteGameHandler} className="px-6 py-3 bg-zinc-700 hover:bg-zinc-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-zinc-700/50">
+                                <button onClick={deleteMovieHandler} className="px-6 py-3 bg-zinc-700 hover:bg-zinc-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-zinc-700/50">
                                     Delete
                                 </button>
                             </div>
                             }
-
-                            {isAuthenticated &&
-                                <MovieComments/>
-                            }
                         </div>
                     </div>
                 </div>
+                
+                <MovieComments/>
             </div>
         </div>
     );
