@@ -1338,6 +1338,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Inception",
                 "genre":"Sci-Fi",
+                "rating": "8.8",
+                "duration": "148 min",
                 "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
                 "imageUrl": "https://c4.wallpaperflare.com/wallpaper/764/590/391/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg",
                 "_createdOn": 1614935055353
@@ -1346,6 +1348,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Dark Knight",
                 "genre":"Action",
+                "rating": "9.0",
+                "duration": "152 min",
                 "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
                 "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDQ5MWU2YWUtNTQ4OC00Njk5LWI0NzctMjM4OGZiNmZmNGViXkEyXkFqcGc@._V1_.jpg",
                 "_createdOn": 1614935181470
@@ -1354,6 +1358,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Interstellar",
                 "genre":"Sci-Fi",
+                "rating": "8.7",
+                "duration": "169 min",
                 "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
                 "imageUrl": "https://i.pinimg.com/736x/11/1c/5c/111c5c9ad99661af2d80e38948cf29d8.jpg",
                 "_createdOn": 1614935268135
@@ -1362,6 +1368,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Pirates of the Caribbean",
                 "genre":"Fantasy Action",
+                "rating": "8.1",
+                "duration": "143 min",
                 "description": "Pirates of the Caribbean is an American fantasy supernatural swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the titular media franchise. The films' plots are set primarily in the Caribbean, based on a fictionalized version of the Golden Age of Piracy (c. 1650–1726) while also leading to the range of a mid-1700s setting.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png/250px-Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
                 "_createdOn": 1613551344360
@@ -1370,6 +1378,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Matrix",
                 "genre": "Action Sci-Fi",
+                "rating": "8.7",
+                "duration": "136 min",
                 "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
                 "_createdOn": 1615554321000
@@ -1378,6 +1388,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Shawshank Redemption",
                 "genre": "Drama",
+                "rating": "9.3",
+                "duration": "142 min",
                 "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
                 "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
                 "_createdOn": 1615555432000
@@ -1386,6 +1398,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Pulp Fiction",
                 "genre": "Crime Drama",
+                "rating": "8.9",
+                "duration": "154 min",
                 "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
                 "_createdOn": 1615556543000
@@ -1394,6 +1408,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Spirited Away",
                 "genre": "Animation Adventure",
+                "rating": "8.6",
+                "duration": "125 min",
                 "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png",
                 "_createdOn": 1615557654000
@@ -1402,6 +1418,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Godfather",
                 "genre": "Crime Drama",
+                "rating": "9.2",
+                "duration": "175 min",
                 "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
                 "imageUrl": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
                 "_createdOn": 1615558765000
@@ -1410,6 +1428,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Gladiator",
                 "genre": "Action Drama",
+                "rating": "8.5",
+                "duration": "155 min",
                 "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png",
                 "_createdOn": 1615559876000
@@ -1418,6 +1438,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Lion King",
                 "genre": "Animation Drama",
+                "rating": "8.5",
+                "duration": "88 min",
                 "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg",
                 "_createdOn": 1615560987000
@@ -1426,6 +1448,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Jurassic Park",
                 "genre": "Adventure Sci-Fi",
+                "rating": "8.2",
+                "duration": "127 min",
                 "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg",
                 "_createdOn": 1615562098000
@@ -1434,6 +1458,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "The Silence of the Lambs",
                 "genre": "Crime Drama",
+                "rating": "8.6",
+                "duration": "118 min",
                 "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg",
                 "_createdOn": 1615563209000
@@ -1442,6 +1468,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Back to the Future",
                 "genre": "Adventure Comedy",
+                "rating": "8.5",
+                "duration": "116 min",
                 "description": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg",
                 "_createdOn": 1615564320000
@@ -1450,6 +1478,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Saving Private Ryan",
                 "genre": "Drama War",
+                "rating": "8.6",
+                "duration": "169 min",
                 "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg",
                 "_createdOn": 1615565431000
@@ -1458,6 +1488,8 @@
                 "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
                 "title": "Schindler's List",
                 "genre": "Biography Drama",
+                "rating": "9.0",
+                "duration": "195 min",
                 "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg",
                 "_createdOn": 1615566542000

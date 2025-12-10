@@ -2,6 +2,7 @@ import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
 import { Link, useNavigate, useParams } from "react-router";
 import useRequest from "../../hooks/useRequest";
+import MovieComments from "./movie-comments/MovieComments";
 
 export default function MovieDetails() {
     const {user, isAuthenticated} = useContext(UserContext);
@@ -40,9 +41,15 @@ export default function MovieDetails() {
                         {/* Content Section */}
                         <div className="p-8 md:p-12 flex flex-col justify-center">
                             {/* Genre Badge */}
-                            <div className="mb-4">
+                            <div className="mb-4 flex flex-wrap gap-2">
                                 <span className="inline-block px-4 py-2 bg-red-900/50 border border-red-600 rounded-full text-red-300 text-sm font-semibold uppercase tracking-wider">
                                     {movie.genre}
+                                </span>
+                                <span className="inline-block px-4 py-2 bg-amber-900/50 border border-amber-500 rounded-full text-amber-200 text-sm font-semibold uppercase tracking-wider">
+                                    Rating: {movie.rating}
+                                </span>
+                                <span className="inline-block px-4 py-2 bg-sky-900/50 border border-sky-500 rounded-full text-sky-200 text-sm font-semibold uppercase tracking-wider">
+                                    Duration: {movie.duration}
                                 </span>
                             </div>
 
@@ -73,6 +80,10 @@ export default function MovieDetails() {
                                     Delete
                                 </button>
                             </div>
+                            }
+
+                            {isAuthenticated &&
+                                <MovieComments/>
                             }
                         </div>
                     </div>

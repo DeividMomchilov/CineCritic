@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "../movie-catalog/movie/Movie";
-import { data, Link } from "react-router";
+import { Link } from "react-router";
 import useRequest from "../../hooks/useRequest";
 
 

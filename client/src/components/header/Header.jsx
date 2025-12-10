@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import UserContext from "../../contexts/UserContext";
 
 export default function Header() {
-  const {user, isAuthenticated} = useContext(UserContext);
+  const { isAuthenticated} = useContext(UserContext);
   return (
     <header className="sticky top-0 z-30 bg-black/95 backdrop-blur-md border-b border-red-700 shadow-md py-2 sm:py-4 px-4 sm:px-8 flex items-center justify-between">
       <div className="text-lg sm:text-2xl font-bold text-red-600 font-mono tracking-widest">
