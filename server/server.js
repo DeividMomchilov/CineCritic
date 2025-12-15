@@ -1493,6 +1493,306 @@
                 "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
                 "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg",
                 "_createdOn": 1615566542000
+            },
+            "c3d4e5f6-a1b2-4c3d-8e9f-0123456789ab": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Lord of the Rings: The Return of the King",
+                "genre": "Adventure Fantasy",
+                "rating": "9.0",
+                "duration": "201 min",
+                "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/23/The_Lord_of_the_Rings%2C_The_Return_of_the_King.jpg",
+                "_createdOn": 1615567653000
+            },
+            "d4e5f6g7-b2c3-5d4e-9f0a-1234567890bc": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Fight Club",
+                "genre": "Drama",
+                "rating": "8.8",
+                "duration": "139 min",
+                "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something much, much more.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg",
+                "_createdOn": 1615568764000
+            },
+            "e5f6g7h8-c3d4-6e5f-0a1b-2345678901cd": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Forrest Gump",
+                "genre": "Drama Romance",
+                "rating": "8.8",
+                "duration": "142 min",
+                "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg",
+                "_createdOn": 1615569875000
+            },
+            "f6g7h8i9-d4e5-7f6g-1b2c-3456789012de": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Goodfellas",
+                "genre": "Biography Crime",
+                "rating": "8.7",
+                "duration": "146 min",
+                "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/7b/Goodfellas.jpg",
+                "_createdOn": 1615570986000
+            },
+            "g7h8i9j0-e5f6-8g7h-2c3d-4567890123ef": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Green Mile",
+                "genre": "Crime Drama",
+                "rating": "8.6",
+                "duration": "189 min",
+                "description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e2/The_Green_Mile_%28movie_poster%29.jpg",
+                "_createdOn": 1615572097000
+            },
+            "h8i9j0k1-f6g7-9h8i-3d4e-5678901234fg": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Parasite",
+                "genre": "Comedy Drama Thriller",
+                "rating": "8.5",
+                "duration": "132 min",
+                "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png",
+                "_createdOn": 1615573208000
+            },
+            "i9j0k1l2-g7h8-0i9j-4e5f-6789012345gh": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Whiplash",
+                "genre": "Drama Music",
+                "rating": "8.5",
+                "duration": "106 min",
+                "description": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/01/Whiplash_poster.jpg",
+                "_createdOn": 1615574319000
+            },
+            "j0k1l2m3-h8i9-1j0k-5f6g-7890123456hi": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Prestige",
+                "genre": "Drama Mystery Sci-Fi",
+                "rating": "8.5",
+                "duration": "130 min",
+                "description": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/Prestige_poster.jpg",
+                "_createdOn": 1615575430000
+            },
+            "k1l2m3n4-i9j0-2k1l-6g7h-8901234567ij": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Departed",
+                "genre": "Crime Drama Thriller",
+                "rating": "8.5",
+                "duration": "151 min",
+                "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/50/Departed2.jpg",
+                "_createdOn": 1615576541000
+            },
+            "l2m3n4o5-j0k1-3l2m-7h8i-9012345678jk": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Usual Suspects",
+                "genre": "Crime Mystery Thriller",
+                "rating": "8.5",
+                "duration": "106 min",
+                "description": "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9c/Usual_suspects_ver1.jpg",
+                "_createdOn": 1615577652000
+            },
+            "m3n4o5p6-k1l2-4m3n-8i9j-0123456789kl": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Léon: The Professional",
+                "genre": "Action Crime Drama",
+                "rating": "8.5",
+                "duration": "110 min",
+                "description": "12-year-old Mathilda is reluctantly taken in by Léon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his protégée and learns the assassin's trade.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/03/Leon-poster.jpg",
+                "_createdOn": 1615578763000
+            },
+            "n4o5p6q7-l2m3-5n4o-9j0k-1234567890lm": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "American History X",
+                "genre": "Drama",
+                "rating": "8.5",
+                "duration": "119 min",
+                "description": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/39/American_History_X_poster.png",
+                "_createdOn": 1615579874000
+            },
+            "o5p6q7r8-m3n4-6o5p-0k1l-2345678901mn": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Casablanca",
+                "genre": "Drama Romance War",
+                "rating": "8.5",
+                "duration": "102 min",
+                "description": "A cynical expatriate American cafe owner struggles to decide whether or not to help his former lover and her fugitive husband escape the Nazis in French Morocco.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/CasablancaPoster-Gold.jpg",
+                "_createdOn": 1615580985000
+            },
+            "p6q7r8s9-n4o5-7p6q-1l2m-3456789012no": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Psycho",
+                "genre": "Horror Mystery Thriller",
+                "rating": "8.5",
+                "duration": "109 min",
+                "description": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/Psycho_%281960%29_theatrical_poster_%28retouched%29.jpg",
+                "_createdOn": 1615582096000
+            },
+            "q7r8s9t0-o5p6-8q7r-2m3n-4567890123op": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "City of God",
+                "genre": "Crime Drama",
+                "rating": "8.6",
+                "duration": "130 min",
+                "description": "In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/10/Cidade_de_Deus.jpg",
+                "_createdOn": 1615583207000
+            },
+            "r8s9t0u1-p6q7-9r8s-3n4o-5678901234pq": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Rear Window",
+                "genre": "Mystery Thriller",
+                "rating": "8.5",
+                "duration": "112 min",
+                "description": "A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Rear_Window_film_poster.jpg",
+                "_createdOn": 1615584318000
+            },
+            "s9t0u1v2-q7r8-0s9t-4o5p-6789012345qr": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Terminator 2: Judgment Day",
+                "genre": "Action Sci-Fi",
+                "rating": "8.6",
+                "duration": "137 min",
+                "description": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten-year-old son, John Connor, from a more advanced and powerful cyborg.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/85/Terminator2poster.jpg",
+                "_createdOn": 1615585429000
+            },
+            "t0u1v2w3-r8s9-1t0u-5p6q-7890123456rs": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Alien",
+                "genre": "Horror Sci-Fi",
+                "rating": "8.5",
+                "duration": "117 min",
+                "description": "The crew of a commercial spacecraft encounter a deadly lifeform after investigating an unknown transmission.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Alien_movie_poster.jpg",
+                "_createdOn": 1615586540000
+            },
+            "u1v2w3x4-s9t0-2u1v-6q7r-8901234567st": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Se7en",
+                "genre": "Crime Drama Mystery",
+                "rating": "8.6",
+                "duration": "127 min",
+                "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg",
+                "_createdOn": 1615587651000
+            },
+            "v2w3x4y5-t0u1-3v2w-7r8s-9012345678tu": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Intouchables",
+                "genre": "Biography Comedy Drama",
+                "rating": "8.5",
+                "duration": "112 min",
+                "description": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/93/The_Intouchables.jpg",
+                "_createdOn": 1615588762000
+            },
+            "w3x4y5z6-u1v2-4w3x-8s9t-0123456789uv": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Django Unchained",
+                "genre": "Drama Western",
+                "rating": "8.5",
+                "duration": "165 min",
+                "description": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg",
+                "_createdOn": 1615589873000
+            },
+            "x4y5z6a7-v2w3-5x4y-9t0u-1234567890vw": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "WALL·E",
+                "genre": "Animation Adventure Family",
+                "rating": "8.4",
+                "duration": "98 min",
+                "description": "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c2/WALL-Eposter.jpg",
+                "_createdOn": 1615590984000
+            },
+            "y5z6a7b8-w3x4-6y5z-0u1v-2345678901wx": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Lives of Others",
+                "genre": "Drama Mystery Thriller",
+                "rating": "8.4",
+                "duration": "137 min",
+                "description": "In 1984 East Berlin, an agent of the secret police, monitoring the East German playwright and his lover, finds himself becoming increasingly absorbed by their lives.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/The_Lives_of_Others_poster.jpg",
+                "_createdOn": 1615592095000
+            },
+            "z6a7b8c9-x4y5-7z6a-1v2w-3456789012xy": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Sunset Blvd.",
+                "genre": "Drama Film-Noir",
+                "rating": "8.4",
+                "duration": "110 min",
+                "description": "A screenwriter develops a dangerous relationship with a faded film star determined to make a triumphant return.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Sunset_Boulevard_%281950_poster%29.jpg",
+                "_createdOn": 1615593206000
+            },
+            "a7b8c9d0-y5z6-8a7b-2w3x-4567890123yz": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "The Shining",
+                "genre": "Drama Horror",
+                "rating": "8.4",
+                "duration": "146 min",
+                "description": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/13/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg",
+                "_createdOn": 1615594317000
+            },
+            "b8c9d0e1-z6a7-9b8c-3x4y-5678901234za": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Dr. Strangelove",
+                "genre": "Comedy War",
+                "rating": "8.4",
+                "duration": "95 min",
+                "description": "An insane American general orders a bombing attack on the Soviet Union, triggering a path to nuclear holocaust that a war room full of politicians and generals frantically tries to stop.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e6/Dr._Strangelove_poster.jpg",
+                "_createdOn": 1615595428000
+            },
+            "c9d0e1f2-a7b8-0c9d-4y5z-6789012345ab": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Spider-Man: Into the Spider-Verse",
+                "genre": "Animation Action Adventure",
+                "rating": "8.4",
+                "duration": "117 min",
+                "description": "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fa/Spider-Man_Into_the_Spider-Verse_poster.png",
+                "_createdOn": 1615596539000
+            },
+            "d0e1f2g3-b8c9-1d0e-5z6a-7890123456bc": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Avengers: Infinity War",
+                "genre": "Action Adventure Sci-Fi",
+                "rating": "8.4",
+                "duration": "149 min",
+                "description": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg",
+                "_createdOn": 1615597650000
+            },
+            "e1f2g3h4-c9d0-2e1f-6a7b-8901234567cd": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Avengers: Endgame",
+                "genre": "Action Adventure Drama",
+                "rating": "8.4",
+                "duration": "181 min",
+                "description": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
+                "_createdOn": 1615598761000
+            },
+            "f2g3h4i5-d0e1-3f2g-7b8c-9012345678de": {
+                "_ownerId": "5660e846-eb5b-4168-a82c-ca50afae5ed9",
+                "title": "Coco",
+                "genre": "Animation Adventure Family",
+                "rating": "8.4",
+                "duration": "105 min",
+                "description": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg",
+                "_createdOn": 1615599872000
             }
         },
         comments: {}
