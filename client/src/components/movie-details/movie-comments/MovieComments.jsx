@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import useRequest from "../../../hooks/useRequest";
 import UserContext from "../../../contexts/UserContext";
 import { useParams } from "react-router";
+import { toast } from "react-toastify";
 
 export default function MovieComments(){
     const { user,isAuthenticated } = useContext(UserContext); 
@@ -29,8 +30,9 @@ export default function MovieComments(){
             });
             setComments((state) => [...state, { ...result, author: user }]);
             setNewComment("");
+            toast.success("Comment added!");
         }catch(error){
-            alert(error.message);
+            toast.error(error.message || "Something went wrong!");
         }
     };
 

@@ -32,6 +32,12 @@ export default function Header() {
                   Logout
                 </Link>
               </li>
+              <li>
+                <Link to="/profile" className="text-sm sm:text-base text-gray-200 hover:text-red-500 transition">
+                  My Profile
+                </Link>
+              </li>
+              
             </>
               )
               

@@ -1,31 +1,14 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import UserContext from "../../contexts/UserContext";
+import { validate } from "../../utils/formValidate";
+import { toast } from "react-toastify";
 
 const initialValues = {
     name: "",
     email: "",
     password: "",
-    gender:"other",
     terms: false
-}
-
-function validate(values){
-  let errors = {};
-
-  if(!values.name)
-    errors['name'] = 'Full name is required';
-
-  if(!values.email)
-    errors['email'] = 'Email is required';
-
-  if(!values.password)
-    errors['password'] = 'Password is required';
-
-  if(values.terms === false)
-    errors['terms'] = 'Age validation required';
-
-  return errors;
 }
 
 export default function RegisterForm() {
@@ -54,9 +37,10 @@ export default function RegisterForm() {
       setData(initialValues);
       setErrors({});
       await registerHandler(data.email,data.password);
+      toast.success("Welcome!");
       navigate('/catalog');
       } catch(error){
-        console.error(error);
+        toast.error(error.message || "Something went wrong!");
       }
   }
 

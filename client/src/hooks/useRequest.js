@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import UserContext from "../contexts/UserContext";
+import { toast } from "react-toastify";
 
 const baseUrl = 'http://localhost:3030';
 
@@ -10,7 +11,7 @@ export default function useRequest(url,initialState) {
 
     const request = async (url,method, data , config = {}) => {
         let options = {};
-        if(method ) {
+        if(method) {
             options.method = method;
         }
 
@@ -48,7 +49,7 @@ export default function useRequest(url,initialState) {
         setIsLoading(true);
         request(url)
             .then(result => setData(result))
-            .catch(err => alert(err))
+            .catch(err => toast.error(err.message || "Something went wrong!"))
             .finally(() => setIsLoading(false));
     },[url])
     

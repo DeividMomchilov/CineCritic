@@ -11,12 +11,26 @@ import MovieDetails from "./components/movie-details/MovieDetails";
 import EditMovie from "./components/edit-movie/EditMovie";
 import RouteGuarder from "./components/route-guarder/RouteGuarder";
 import GuestRouter from "./components/guest-router/GuestRouter";
+import { ToastContainer } from 'react-toastify';
+import Profile from "./components/profile/Profile";
 
 export default function App() {
   return (
     <>
       <Header/>
 
+      <ToastContainer 
+          position="bottom-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          theme="dark" // Matches your dark theme perfectly
+      />
+      
       <Routes>
         
         <Route path="/catalog" element={<MovieCatalog/>}/>
@@ -29,6 +43,7 @@ export default function App() {
         </Route>
 
         <Route element={<RouteGuarder/>}>
+          <Route path="/profile" element={<Profile/>}/>
           <Route path="/logout" element={<Logout/>}/>
           <Route path="/catalog/create" element={<CreateMovie/>}/>
           <Route path="/catalog/:movieId/edit" element={<EditMovie/>}/>

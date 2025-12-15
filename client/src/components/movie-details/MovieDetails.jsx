@@ -3,6 +3,7 @@ import UserContext from "../../contexts/UserContext";
 import { Link, useNavigate, useParams } from "react-router";
 import useRequest from "../../hooks/useRequest";
 import MovieComments from "./movie-comments/MovieComments";
+import { toast } from "react-toastify";
 
 export default function MovieDetails() {
     const {user} = useContext(UserContext);
@@ -16,9 +17,10 @@ export default function MovieDetails() {
 
         try{
             await request(`/data/movies/${movieId}`, 'DELETE');
+            toast.success("Deleted!");
             navigate('/catalog')
         }catch(error){
-            alert(error.message);
+            toast.error(error.message || "Something went wrong!");
         }
         
     }
@@ -80,7 +82,6 @@ export default function MovieDetails() {
                         </div>
                     </div>
                 </div>
-                
                 <MovieComments/>
             </div>
         </div>

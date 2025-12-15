@@ -2,23 +2,14 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router";
 import UserContext from "../../contexts/UserContext";
 import { useNavigate } from "react-router";
+import { validate } from "../../utils/formValidate";
+import { toast } from "react-toastify";
 
 const initialValues = {
     email: "",
     password: "",
 }
 
-function validate(values){
-  let errors = {};
-
-  if(!values.email)
-    errors['email'] = 'Email is required';
-
-  if(!values.password)
-    errors['password'] = 'Password is required';
-
-  return errors;
-}
 
 export default function Login() {
     const [data,setData] = useState(initialValues);
@@ -47,6 +38,7 @@ export default function Login() {
         setData(initialValues);
         setErrors({});
         await loginHandler(data.email,data.password);
+        toast.success("Welcome back!");
         navigate('/catalog');
       } catch (error) {      
           console.error(error);

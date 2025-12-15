@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import useRequest from "../../hooks/useRequest";
-
+import { validate } from "../../utils/formValidate";
+import { toast } from "react-toastify";
 
 const initialValues = {
     title: "",
@@ -10,30 +11,6 @@ const initialValues = {
     duration: "",
     description: "",
     imageUrl: ""
-}
-
-function validate(values){
-  let errors = {};
-
-  if(!values.title)
-    errors['title'] = 'Title is required';
-
-  if(!values.genre)
-    errors['genre'] = 'Genre is required';
-
-  if(!values.rating)
-    errors['rating'] = 'Rating is required';
-
-  if(!values.duration)
-    errors['duration'] = 'Duration is required';
-
-  if(!values.description)
-    errors['description'] = 'Description is required';
-
-  if(!values.imageUrl)
-    errors['imageUrl'] = 'Image URL is required';
-
-  return errors;
 }
 
 export default function CreateMovie(){
@@ -67,9 +44,10 @@ export default function CreateMovie(){
         await request('/data/movies', 'POST', data);
         setData(initialValues);
         setErrors({}); 
+        toast.success("Created!");
         navigate('/catalog');
       } catch (error) {      
-          console.error(error);
+            toast.error(error.message || "Something went wrong!");
       }
 
   }

@@ -1,31 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import useRequest from "../../hooks/useRequest";
-
+import { validate } from "../../utils/formValidate";
+import { toast } from "react-toastify";
 
 const initialValues = {
     title: "",
     genre: "",
+    rating: "",
+    duration: "",
     description: "",
     imageUrl: ""
-}
-
-function validate(values){
-  let errors = {};
-
-  if(!values.title)
-    errors['title'] = 'Title is required';
-
-  if(!values.genre)
-    errors['genre'] = 'Genre is required';
-
-  if(!values.description)
-    errors['description'] = 'Description is required';
-
-  if(!values.imageUrl)
-    errors['imageUrl'] = 'Image URL is required';
-
-  return errors;
 }
 
 export default function EditMovie(){
@@ -39,7 +24,7 @@ export default function EditMovie(){
     useEffect(() => {
         request(`/data/movies/${movieId}`)
             .then(result => setData(result))
-            .catch(error => alert(error.message))
+            .catch(error => toast.error(error.message || "Something went wrong!"))
     },[movieId,setData])
 
 
@@ -67,9 +52,10 @@ export default function EditMovie(){
         await request(`/data/movies/${movieId}`, 'PUT', data);
         setData(initialValues);
         setErrors({}); 
+        toast.success("Edited!");
         navigate(`/catalog/${movieId}/details`);
       } catch (error) {      
-          console.error(error);
+          toast.error(error.message || "Something went wrong!");
       }
 
   }
@@ -142,6 +128,50 @@ export default function EditMovie(){
                                 onBlur={validationHandler}
                             />
                             {errors.genre && touched.genre && (
+                                <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.genre}</p>
+                            )}
+                        </div>
+                            
+                        <div>
+                            <label 
+                                htmlFor="rating" 
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                            >
+                                Rating
+                            </label>
+                            <input
+                                type="text"
+                                id="rating"
+                                name="rating"
+                                className={`w-full ${inputClass('rating')}`}
+                                placeholder="Enter movie rating"
+                                value={data.rating}
+                                onChange={changeHandler}
+                                onBlur={validationHandler}
+                            />
+                            {errors.rating && touched.rating && (
+                                <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.rating}</p>
+                            )}
+                        </div>
+
+                        <div>
+                            <label 
+                                htmlFor="duration" 
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                            >
+                                Duration
+                            </label>
+                            <input
+                                type="text"
+                                id="duration"
+                                name="duration"
+                                className={`w-full ${inputClass('duration')}`}
+                                placeholder="Enter movie duration"
+                                value={data.duration}
+                                onChange={changeHandler}
+                                onBlur={validationHandler}
+                            />
+                            {errors.duration && touched.duration && (
                                 <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.genre}</p>
                             )}
                         </div>
