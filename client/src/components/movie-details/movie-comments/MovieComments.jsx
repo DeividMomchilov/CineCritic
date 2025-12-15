@@ -20,7 +20,7 @@ export default function MovieComments(){
         request(`/data/comments?${urlParams.toString()}`)
             .then(result => setComments(result))
             .catch(err => console.error(err));
-    }, [movieId, request]);
+    }, [movieId]);
 
     const handleCommentSubmit = async () =>{
         try{
