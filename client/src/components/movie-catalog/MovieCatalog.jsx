@@ -7,66 +7,99 @@ import MovieSkeleton from "./movie-skeleton/MovieSkeleton";
 
 export default function MovieCatalog() {
     const { isAuthenticated } = useContext(UserContext);
-    const [search, setSearch] = useState('');
-    const [debouncedSearch,setDebouncedSearch] = useState('');
-    const [page, setPage] = useState(0);
+    const [search, setSearch] = useState(() => sessionStorage.getItem('catalog_search') || '');
+    const [page, setPage] = useState(() => Number(sessionStorage.getItem('catalog_page')) || 0);
+    const [sortBy, setSortBy] = useState(() => sessionStorage.getItem('catalog_sort') || '_createdOn desc');
+    const [debouncedSearch, setDebouncedSearch] = useState(search);
     const PAGE_SIZE = 10;
 
-    useEffect(() =>{
-        const timerId = setTimeout(() =>{
-            setDebouncedSearch(search);
-        },100)
-
-        return () => clearTimeout(timerId);
-    },[search])
+    useEffect(() => {
+        sessionStorage.setItem('catalog_search', search);
+        sessionStorage.setItem('catalog_page', page);
+        sessionStorage.setItem('catalog_sort', sortBy);
+    }, [search, page, sortBy]);
 
     useEffect(() => {
-        setPage(0);
+        const timerId = setTimeout(() => {
+            setDebouncedSearch(search);
+        }, 500);
+        return () => clearTimeout(timerId);
+    }, [search]);
+
+    useEffect(() => {
+        const lastSearch = sessionStorage.getItem('catalog_last_search') || ''; 
+        
+        if (debouncedSearch !== lastSearch) {
+            setPage(0);
+            sessionStorage.setItem('catalog_last_search', debouncedSearch);
+        }
     }, [debouncedSearch]);
 
 
     const query = debouncedSearch 
-        ? `/data/movies?where=${encodeURIComponent(`title LIKE "${search}"`)}`
-        : `/data/movies?offset=${page * PAGE_SIZE}&pageSize=${PAGE_SIZE}`;
+        ? `/data/movies?where=${encodeURIComponent(`title LIKE "${debouncedSearch}"`)}&sortBy=${sortBy}`
+        : `/data/movies?offset=${page * PAGE_SIZE}&pageSize=${PAGE_SIZE}&sortBy=${sortBy}`;
 
-    const { data: movies, isLoading } = useRequest(query, [page, PAGE_SIZE, search]);
+    const { data: movies, isLoading } = useRequest(query, [page, PAGE_SIZE, debouncedSearch, sortBy]);
 
     const containerClasses = "flex flex-col items-center min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 relative overflow-x-hidden";
-
+    const inputStyles = "w-full bg-zinc-800/90 border-2 border-red-900/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-600/50 focus:bg-zinc-800 transition-all duration-200 shadow-lg backdrop-blur-sm h-[52px]";
 
     return (
         <div className={containerClasses}>
-            <div className="flex justify-center mt-10 mb-6 px-4 w-full">
-                <div className="relative w-full max-w-2xl">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
-                        <svg className="h-6 w-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                        </svg>
-                    </div>
-                    <input 
-                        type="text"
-                        // Changed placeholder to reflect reality
-                        placeholder={search ? "Searching..." : "Search movies..."} 
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        className="w-full pl-14 pr-12 py-3.5 bg-zinc-800/90 border-2 border-red-900/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-600/50 focus:bg-zinc-800 transition-all duration-200 shadow-lg backdrop-blur-sm"
-                    />
-                    {search && (
-                        <button
-                            onClick={() => setSearch('')}
-                            className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-red-500 transition-colors"
-                        >
-                            <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+            <div className="w-full max-w-5xl mx-auto mt-12 mb-8 px-4">
+                <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+                    
+                    {/* Search Input */}
+                    <div className="relative w-full md:flex-1">
+                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+                            <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                             </svg>
-                        </button>
-                    )}
+                        </div>
+                        <input 
+                            type="text"
+                            placeholder={search ? "Searching..." : "Search movies..."} 
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            className={`${inputStyles} pl-12 pr-12`}
+                        />
+                        {search && (
+                            <button
+                                onClick={() => setSearch('')}
+                                className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-red-500 transition-colors"
+                            >
+                                <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                                </svg>
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Sort Select */}
+                    <div className="relative w-full md:w-64">
+                        <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+                        <select 
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value)}
+                            className={`${inputStyles} px-4 appearance-none cursor-pointer`}
+                        >
+                            <option value="_createdOn desc">Newest Arrivals</option>
+                            <option value="_createdOn asc">Oldest Classics</option>
+                            <option value="rating desc">Highest Rated</option>
+                            <option value="title asc">Name (A-Z)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
             {isLoading && (
                 <div className={containerClasses}>
-                    <section className="flex flex-wrap justify-center gap-6 ...">
+                    <section className="flex flex-wrap justify-center gap-6 w-full px-4 pb-8 max-w-[1920px]">
                         {Array(PAGE_SIZE).fill(0).map((_,i) => <MovieSkeleton key={i}/>)}
                     </section>
                 </div>
@@ -108,7 +141,6 @@ export default function MovieCatalog() {
                         </Link>
                     )}
                 </section>
-            
             )}
             
             {!search && movies.length > 0 && (
