@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import UserContext from "../contexts/UserContext";
 import { toast } from "react-toastify";
 
-const baseUrl = 'http://localhost:3030';
+const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3030';
 
 export default function useRequest(url,initialState) {
     const {user, isAuthenticated} = useContext(UserContext);

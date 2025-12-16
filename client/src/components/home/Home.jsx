@@ -37,7 +37,6 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-transparent"></div>
                 </div>
 
-                {/* Hero Content */}
                 <div className="absolute bottom-0 left-0 w-full p-8 md:p-24 flex flex-col justify-end items-start z-10">
                     <div className="flex items-center gap-3 mb-6">
                         <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold uppercase tracking-widest rounded shadow-lg">
@@ -58,7 +57,7 @@ export default function Home() {
                     
                     <div className="flex flex-wrap items-center gap-4">
                         <Link 
-                            to={`/catalog/${featuredMovie._id}`} 
+                            to={`/catalog/${featuredMovie._id}/details`} 
                             className="bg-red-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition transform hover:-translate-y-1 shadow-red-900/50 shadow-lg flex items-center gap-3"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -74,7 +73,6 @@ export default function Home() {
         )}
       </section>
 
-      {/* ================= LATEST RELEASES SECTION ================= */}
       <section className="w-full max-w-[1600px] mx-auto px-6 py-20">
         <div className="flex items-end justify-between mb-10">
             <div>
@@ -96,7 +94,6 @@ export default function Home() {
             }
         </div>
         
-        {/* Mobile View All Button */}
         <div className="mt-8 md:hidden flex justify-center">
             <Link to="/catalog" className="w-full py-4 rounded-xl border border-zinc-700 text-white text-center font-bold hover:bg-zinc-800 transition">
                 Browse Full Catalog
@@ -104,7 +101,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= GENRE / CATEGORIES SECTION ================= */}
       <section className="w-full bg-zinc-900/30 border-y border-zinc-800 py-20">
           <div className="max-w-[1600px] mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 text-center">Browse by Collection</h2>
