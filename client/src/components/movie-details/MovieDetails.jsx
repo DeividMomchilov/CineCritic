@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserContext from "../../contexts/UserContext";
 import { Link, useNavigate, useParams } from "react-router";
 import useRequest from "../../hooks/useRequest";
@@ -10,8 +10,33 @@ export default function MovieDetails() {
     const {movieId} = useParams();
     const {data : movie, request} = useRequest(`/data/movies/${movieId}`,{});
     const navigate = useNavigate();
+    const [likes,setLikes] = useState(0);
+    const [isLiked, setIsLiked] = useState(false);
 
     const isOwner = user?._id === movie?._ownerId;
+
+    useEffect(() => {
+        request(`/data/likes?where=movieId%3D"${movieId}"&count`)
+            .then(count => setLikes(count));
+
+        if (user?._id) {
+            request(`/data/likes?where=movieId%3D"${movieId}"%20AND%20_ownerId%3D"${user._id}"`)
+                .then(result => {
+                    if (result.length > 0) setIsLiked(true);
+                });
+        }
+    },[movieId,user?._id]);
+
+    const onLike = async () =>{
+        try{
+            await request('/data/likes', 'POST', { movieId });
+            setIsLiked(true);
+            setLikes((likes) => likes+1);
+            toast.success("You liked this movie!");
+        }catch(error){
+            toast.error(error.message);
+        }
+    }
 
     const deleteMovieHandler = async () => {
 
@@ -66,6 +91,31 @@ export default function MovieDetails() {
                                     {movie.description}
                                 </p>
                             </div>
+
+                            <div className="flex items-center gap-4 mb-6">
+                                {!isOwner && user?._id && !isLiked && (
+                                    <button 
+                                        onClick={onLike}
+                                        className="flex items-center gap-2 px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded-full transition shadow-lg"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                                        </svg>
+                                        Like Movie
+                                    </button>
+                                )}
+                                {isLiked && (
+                                    <span className="text-pink-400 font-bold flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                                        </svg>
+                                        Liked
+                                    </span>
+                                )}
+                                <div className="text-gray-300 font-mono text-sm">
+                                    <span className="text-white font-bold text-lg">{likes}</span> Likes
+                                </div>
+                             </div>
 
                             {isOwner &&                       
                             <div className="flex gap-4 mt-6">
