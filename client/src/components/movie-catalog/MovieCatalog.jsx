@@ -1,54 +1,38 @@
 import useRequest from "../../hooks/useRequest";
 import Movie from "./movie/Movie";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserContext from "../../contexts/UserContext";
 import { Link } from "react-router";
+import MovieSkeleton from "./movie-skeleton/MovieSkeleton";
 
 export default function MovieCatalog() {
+    const { isAuthenticated } = useContext(UserContext);
+    const [search, setSearch] = useState('');
+    const [debouncedSearch,setDebouncedSearch] = useState('');
     const [page, setPage] = useState(0);
     const PAGE_SIZE = 10;
 
-    // 1. Upgrade: Fetch only the specific page of movies from the server
-    const { data: movies, isLoading } = useRequest(
-        `/data/movies?offset=${page * PAGE_SIZE}&pageSize=${PAGE_SIZE}`, 
-        []
-    );
+    useEffect(() =>{
+        const timerId = setTimeout(() =>{
+            setDebouncedSearch(search);
+        },100)
 
-    const { isAuthenticated } = useContext(UserContext);
-    const [search, setSearch] = useState('');
-    
-    const filteredMovies = movies.filter((m) => m.title.toLowerCase().includes(search.toLowerCase()))
+        return () => clearTimeout(timerId);
+    },[search])
+
+    useEffect(() => {
+        setPage(0);
+    }, [debouncedSearch]);
+
+
+    const query = debouncedSearch 
+        ? `/data/movies?where=${encodeURIComponent(`title LIKE "${search}"`)}`
+        : `/data/movies?offset=${page * PAGE_SIZE}&pageSize=${PAGE_SIZE}`;
+
+    const { data: movies, isLoading } = useRequest(query, [page, PAGE_SIZE, search]);
 
     const containerClasses = "flex flex-col items-center min-h-screen bg-gradient-to-br from-black via-zinc-900 to-red-900 relative overflow-x-hidden";
 
-    if (isLoading)
-        return (
-            <div className={containerClasses + " justify-center"}>
-                <div className="w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-                <div className="text-white text-xl animate-pulse">Loading Cinema...</div>
-            </div>
-        )
-
-    if (!isLoading && movies.length === 0) {
-        if (page > 0) {
-            return (
-                <div className={containerClasses + " justify-center"}>
-                    <div className="text-white text-2xl mb-6">End of the reel.</div>
-                    <button 
-                        onClick={() => setPage(old => Math.max(0, old - 1))}
-                        className="px-6 py-3 bg-red-700 hover:bg-red-600 text-white font-bold rounded-xl transition-all shadow-lg"
-                    >
-                        Rewind (Go Back)
-                    </button>
-                </div>
-            )
-        }       
-        return (
-            <div className={containerClasses + " justify-center"}>
-                <div className="text-white text-xl">No movies available yet.</div>
-            </div>
-        )
-    }
 
     return (
         <div className={containerClasses}>
@@ -61,7 +45,8 @@ export default function MovieCatalog() {
                     </div>
                     <input 
                         type="text"
-                        placeholder="Search current page..."
+                        // Changed placeholder to reflect reality
+                        placeholder={search ? "Searching..." : "Search movies..."} 
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         className="w-full pl-14 pr-12 py-3.5 bg-zinc-800/90 border-2 border-red-900/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-600/50 focus:bg-zinc-800 transition-all duration-200 shadow-lg backdrop-blur-sm"
@@ -79,55 +64,82 @@ export default function MovieCatalog() {
                 </div>
             </div>
 
-            <section className="flex flex-wrap justify-center gap-x-6 gap-y-8 w-full px-4 pb-8 max-w-[1920px]">
-                { (movies.length > 0 && search === '') ?
-                    movies.map(movie => <Movie key = {movie._id} {...movie}/>)
-                    :
-                    filteredMovies.map(movie => <Movie key = {movie._id} {...movie}/>)
-                }
-                
-                {isAuthenticated &&
-                    <Link 
-                        to={"/catalog/create"}
-                        className="relative rounded-xl overflow-hidden shadow-xl border-2 border-dashed border-red-600 bg-zinc-800/50 group w-[240px] md:w-[270px] min-w-[220px] aspect-[3/4] flex flex-col justify-center items-center mx-[8px] my-2 hover:scale-105 hover:border-red-500 hover:bg-zinc-800/70 transition-all duration-200 cursor-pointer"
+            {isLoading && (
+                <div className={containerClasses}>
+                    <section className="flex flex-wrap justify-center gap-6 ...">
+                        {Array(PAGE_SIZE).fill(0).map((_,i) => <MovieSkeleton key={i}/>)}
+                    </section>
+                </div>
+            )}
+
+            {!isLoading && movies.length === 0 && (
+                <div className="mt-20 flex flex-col items-center justify-center">
+                    {page > 0 ? (
+                        <>
+                            <div className="text-white text-2xl mb-6">End of the reel.</div>
+                            <button 
+                                onClick={() => setPage(old => Math.max(0, old - 1))}
+                                className="px-6 py-3 bg-red-700 hover:bg-red-600 text-white font-bold rounded-xl transition-all shadow-lg"
+                            >
+                                Rewind (Go Back)
+                            </button>
+                        </>
+                    ) : (
+                        <div className="text-white text-xl">No movies found.</div>
+                    )}
+                </div>
+            )}
+
+            {!isLoading && movies.length > 0 && (
+                <section className="flex flex-wrap justify-center gap-x-6 gap-y-8 w-full px-4 pb-8 max-w-[1920px]">
+                    {movies.map(movie => <Movie key={movie._id} {...movie}/>)}
+                    
+                    {isAuthenticated && !search && movies.length < PAGE_SIZE && (
+                        <Link 
+                            to={"/catalog/create"}
+                            className="relative rounded-xl overflow-hidden shadow-xl border-2 border-dashed border-red-600 bg-zinc-800/50 group w-[240px] md:w-[270px] min-w-[220px] aspect-[3/4] flex flex-col justify-center items-center mx-[8px] my-2 hover:scale-105 hover:border-red-500 hover:bg-zinc-800/70 transition-all duration-200 cursor-pointer"
+                        >
+                            <div className="flex flex-col items-center justify-center gap-3 text-red-400 group-hover:text-red-300 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 stroke-current stroke-2" fill="none" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                                </svg>
+                                <span className="text-lg font-semibold">Add Movie</span>
+                            </div>
+                        </Link>
+                    )}
+                </section>
+            
+            )}
+            
+            {!search && movies.length > 0 && (
+                <div className="flex items-center justify-center gap-6 mb-12 mt-auto pt-4">
+                    <button 
+                        onClick={() => setPage(old => Math.max(0, old - 1))}
+                        disabled={page === 0}
+                        className="px-6 py-2 bg-zinc-900 border border-red-900/30 text-white rounded-full hover:bg-red-900 disabled:opacity-50 disabled:hover:bg-zinc-900 disabled:cursor-not-allowed transition-all shadow-lg flex items-center gap-2"
                     >
-                        <div className="flex flex-col items-center justify-center gap-3 text-red-400 group-hover:text-red-300 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 stroke-current stroke-2" fill="none" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-                            </svg>
-                            <span className="text-lg font-semibold">Add Movie</span>
-                        </div>
-                    </Link>
-                }
-            </section>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        Previous
+                    </button>
 
-            <div className="flex items-center justify-center gap-6 mb-12 mt-auto pt-4">
-                <button 
-                    onClick={() => setPage(old => Math.max(0, old - 1))}
-                    disabled={page === 0}
-                    className="px-6 py-2 bg-zinc-900 border border-red-900/30 text-white rounded-full hover:bg-red-900 disabled:opacity-50 disabled:hover:bg-zinc-900 disabled:cursor-not-allowed transition-all shadow-lg flex items-center gap-2"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Previous
-                </button>
+                    <span className="text-zinc-400 font-mono text-sm tracking-widest uppercase">
+                        Page <span className="text-white font-bold text-lg mx-1">{page + 1}</span>
+                    </span>
 
-                <span className="text-zinc-400 font-mono text-sm tracking-widest uppercase">
-                    Page <span className="text-white font-bold text-lg mx-1">{page + 1}</span>
-                </span>
-
-                <button 
-                    onClick={() => setPage(old => old + 1)}
-                    disabled={movies.length < PAGE_SIZE} 
-                    className="px-6 py-2 bg-zinc-900 border border-red-900/30 text-white rounded-full hover:bg-red-900 disabled:opacity-50 disabled:hover:bg-zinc-900 disabled:cursor-not-allowed transition-all shadow-lg flex items-center gap-2"
-                >
-                    Next
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+                    <button 
+                        onClick={() => setPage(old => old + 1)}
+                        disabled={movies.length < PAGE_SIZE} 
+                        className="px-6 py-2 bg-zinc-900 border border-red-900/30 text-white rounded-full hover:bg-red-900 disabled:opacity-50 disabled:hover:bg-zinc-900 disabled:cursor-not-allowed transition-all shadow-lg flex items-center gap-2"
+                    >
+                        Next
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

@@ -36,7 +36,16 @@ export default function MovieComments(){
         }
     };
 
-    
+    const handleDeleteComment = async(commentId) =>{
+        try{
+            await request(`/data/comments/${commentId}`, 'DELETE');
+            setComments(comments => comments.filter(c => c._id !== commentId))
+            toast.success("Comment deleted!");
+        }catch(error){
+            toast.error(error.message || "Something went wrong!");
+        }
+    }
+
     return(
         <section className="mt-12">
             <div className="max-w-4xl mx-auto">
@@ -73,6 +82,16 @@ export default function MovieComments(){
                                             <p className="text-gray-200 leading-relaxed text-base break-words">{comment.text}</p>
                                         </div>
                                     </div>
+                                    {user?._id === comment._ownerId &&
+                                        <button 
+                                        onClick={() => handleDeleteComment(comment._id)}
+                                        className="text-gray-500 hover:text-red-500 transition-colors"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                                            </svg>
+                                        </button>
+                                    }
                                 </article>
                             ))}
                         </div>
@@ -98,7 +117,7 @@ export default function MovieComments(){
                                     </button>
                                 </div>
                             </form>
-                        )}
+                        )}     
 
                         {!isAuthenticated && (
                             <div className="text-center py-6 border-t border-zinc-800/50">
