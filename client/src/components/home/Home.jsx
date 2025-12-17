@@ -7,14 +7,11 @@ import UserContext from "../../contexts/UserContext";
 export default function Home() {
   const { isAuthenticated } = useContext(UserContext);
 
-  // 1. Fetch Hero Movie (Top Rated)
   const { data: heroMovies, isLoading: heroLoading } = useRequest(`/data/movies?sortBy=rating%20desc&pageSize=1`, []);
   const featuredMovie = heroMovies.length > 0 ? heroMovies[0] : null;
 
-  // 2. Fetch Latest Movies (Newest 4)
   const { data: latestMovies, isLoading: latestLoading } = useRequest(`/data/movies?sortBy=_createdOn%20desc&pageSize=4`, []);
 
-  // Skeleton loader for the grid
   const MovieSkeleton = () => (
       <div className="w-full aspect-[2/3] bg-zinc-900 rounded-xl animate-pulse"></div>
   );
@@ -22,7 +19,6 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-black relative overflow-x-hidden">     
       
-      {/* ================= HERO SECTION ================= */}
       <section className="w-full relative animate-fadein">
         {!heroLoading && featuredMovie ? (
             <div className="relative w-full h-[85vh] md:h-[95vh]">
@@ -123,12 +119,16 @@ export default function Home() {
                 </div>
 
                 <div className="relative h-64 group rounded-2xl overflow-hidden cursor-pointer border border-zinc-700 hover:border-red-500 transition-colors">
-                    <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&q=80" className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700" alt="Sci-Fi" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-black text-white uppercase tracking-widest drop-shadow-xl">Sci-Fi</h3>
-                         <span className="mt-2 text-red-400 font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Explore &rarr;</span>
-                    </div>
+                <img 
+                    src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?auto=format&fit=crop&q=80" 
+                    className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700" 
+                    alt="Sci-Fi" 
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <h3 className="text-3xl font-black text-white uppercase tracking-widest drop-shadow-xl">Sci-Fi</h3>
+                    <span className="mt-2 text-red-400 font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Explore &rarr;</span>
                 </div>
+</div>
 
             </div>
           </div>
