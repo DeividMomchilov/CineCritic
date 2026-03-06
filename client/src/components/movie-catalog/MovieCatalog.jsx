@@ -26,7 +26,7 @@ export default function MovieCatalog() {
         return () => clearTimeout(timerId);
     }, [search]);
 
-    useEffect(() => {
+    useEffect(() => async () => {
         const lastSearch = sessionStorage.getItem('catalog_last_search') || ''; 
         
         if (debouncedSearch !== lastSearch) {

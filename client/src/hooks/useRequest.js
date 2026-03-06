@@ -42,7 +42,7 @@ export default function useRequest(url,initialState) {
         return await response.json();
     }
 
-    useEffect(() => {
+    useEffect(() => async () => {
         if(!url)
             return;
 
