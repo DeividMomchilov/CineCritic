@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420192749_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99508314-E347-B12E-21A7-B15CDD89C32F}|..\\CineCritic.Data\\CineCritic.Data.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420192508_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99508314-E347-B12E-21A7-B15CDD89C32F}|..\\CineCritic.Data\\CineCritic.Data.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic.data\\data\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420191843_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99508314-E347-B12E-21A7-B15CDD89C32F}|..\\CineCritic.Data\\CineCritic.Data.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic.data\\data\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99508314-E347-B12E-21A7-B15CDD89C32F}|..\\CineCritic.Data\\CineCritic.Data.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic.data\\cinecritic.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06A3582F-4EBC-CBFC-6495-FBD98F2933BB}|CineCritic.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06A3582F-4EBC-CBFC-6495-FBD98F2933BB}|CineCritic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99508314-E347-B12E-21A7-B15CDD89C32F}|..\\CineCritic.Data\\CineCritic.Data.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic.data\\data\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61708BF7-1889-B147-3E25-ED8A3992B2EA}|..\\CineCritic.Common\\CineCritic.Common.csproj|c:\\programing\\web development\\projects\\cinecritic\\server\\cinecritic.common\\entityvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T16:22:39.342Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Data\\Entities\\Movie.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\Data\\Entities\\Movie.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Data\\Entities\\Movie.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\Data\\Entities\\Movie.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T16:55:13.07Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Data\\Entities\\Genre.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\Data\\Entities\\Genre.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Data\\Entities\\Genre.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\Data\\Entities\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T17:00:59.141Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Data\\Entities\\Comment.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\Data\\Entities\\Comment.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Data\\Entities\\Comment.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\Data\\Entities\\Comment.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA9wAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T17:06:49.724Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20260420192749_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420192749_InitialMigration.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\Migrations\\20260420192749_InitialMigration.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420192749_InitialMigration.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\Migrations\\20260420192749_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:27:50.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260420192508_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420192508_InitialMigration.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\Migrations\\20260420192508_InitialMigration.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420192508_InitialMigration.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\Migrations\\20260420192508_InitialMigration.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAqwFcBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:25:08.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260420191843_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420191843_InitialMigration.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\Migrations\\20260420191843_InitialMigration.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\Migrations\\20260420191843_InitialMigration.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\Migrations\\20260420191843_InitialMigration.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAqwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:18:43.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CineCritic.Data.csproj",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\CineCritic.Data.csproj",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\CineCritic.Data.csproj",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\CineCritic.Data.csproj",
+              "RelativeToolTip": "..\\CineCritic.Data\\CineCritic.Data.csproj",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwBoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-20T19:15:17.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\CineCritic.Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:10:49.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EntityValidation.cs",
+              "DocumentMoniker": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Common\\EntityValidation.cs",
+              "RelativeDocumentMoniker": "..\\CineCritic.Common\\EntityValidation.cs",
+              "ToolTip": "C:\\Programing\\Web Development\\Projects\\CineCritic\\server\\CineCritic.Common\\EntityValidation.cs",
+              "RelativeToolTip": "..\\CineCritic.Common\\EntityValidation.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T18:41:13.278Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

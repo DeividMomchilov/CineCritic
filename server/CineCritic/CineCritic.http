@@ -1,0 +1,6 @@
+@CineCritic_HostAddress = http://localhost:5029
+
+GET {{CineCritic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

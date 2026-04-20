@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../CineCritic.Common/CineCritic.Common.csproj" />
+  <Project Path="../CineCritic.Data/CineCritic.Data.csproj" />
+  <Project Path="CineCritic.csproj" />
+</Solution>

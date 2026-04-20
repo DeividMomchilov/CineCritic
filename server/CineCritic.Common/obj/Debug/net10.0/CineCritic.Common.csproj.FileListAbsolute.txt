@@ -1,0 +1,12 @@
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\bin\Debug\net10.0\CineCritic.Common.deps.json
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\bin\Debug\net10.0\CineCritic.Common.dll
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\bin\Debug\net10.0\CineCritic.Common.pdb
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.AssemblyInfoInputs.cache
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.AssemblyInfo.cs
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.csproj.CoreCompileInputs.cache
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.sourcelink.json
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.dll
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\refint\CineCritic.Common.dll
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\CineCritic.Common.pdb
+C:\Programing\Web Development\Projects\CineCritic\server\CineCritic.Common\obj\Debug\net10.0\ref\CineCritic.Common.dll
